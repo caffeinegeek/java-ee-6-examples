@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.caffeinegeek.examples</groupId>
+        <artifactId>java-ee-6-examples</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>java-ee-6-cdi-examples</artifactId>
+    <packaging>pom</packaging>
+    <name>java-ee-6-cdi-examples</name>
+
+    <!-- MODULES -->
+    <modules>
+        <module>cdi-lib</module>
+        <module>cdi-app</module>
+    </modules>
+
+    <!-- DEPENDENCIES -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>java-ee-6-cdi-lib</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
